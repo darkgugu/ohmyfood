@@ -69,6 +69,8 @@ h3 {
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-weight: 500;
+  font-size: 0.9em;
+  text-decoration: none;
   width: 50%;
 }
 
