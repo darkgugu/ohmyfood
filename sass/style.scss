@@ -230,3 +230,25 @@ h3{
         }
     }
 }
+
+.over{
+    position: absolute;
+}
+
+.under{
+    color: $main-color;
+    transform: scale(0);
+    transition: transform 400ms;
+}
+
+.anim-trigger{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    margin: 0;
+    z-index: 99;
+    &:checked + .under{
+        transform: scale(1) translateY(-1px);
+    }
+}
