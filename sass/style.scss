@@ -5,6 +5,7 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey-text-color: #353535;
 $grey-background-color: #F6F6F6;
+$duration-loader: random($limit: 2000)+1000 *1ms;
 
 //Mixins
 
@@ -28,6 +29,32 @@ $grey-background-color: #F6F6F6;
     font-weight: 500;
     font-size: .9em;
     text-decoration: none;
+    box-shadow: 0px 0px 3px grey;
+    &:active{
+        background: linear-gradient(lighten($secondary-color, 5%), lighten($main-color, 5%));
+        box-shadow: 0px 0px 6px grey;
+    }
+}
+
+//Animations
+
+@keyframes loader-anim {
+    0%{
+        transform: rotate(0);
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes page-return {
+    100%{
+        transform: scale(1);
+    }   
 }
 
 //Polices
@@ -38,9 +65,11 @@ $grey-background-color: #F6F6F6;
 
 //Général
 
-body{
+body, html{
     margin: 0;
+    height: 100%;
 }
+
 h2{
     font-weight: 500;
 }
@@ -48,6 +77,32 @@ h3{
     font-weight: 500;
     margin: 0;
 }
+
+.div-loader{
+    //background-color: pink;
+    position: absolute;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    @include centered();
+
+    &-anim{
+        border: solid 2px black;
+        height: 100px;
+        width: 100px;
+        opacity: 1;
+        position: absolute;
+        border-radius: 5px;
+        animation: loader-anim $duration-loader forwards;
+    }
+}
+
+
+.page{
+    transform: scale(0);
+    animation: page-return 0s $duration-loader forwards;
+}
+
 
 //Haut de page
 
@@ -247,7 +302,7 @@ h3{
     height: 18px;
     opacity: 0;
     margin: 0;
-    z-index: 99;
+    z-index: 2;
     &:checked + .under{
         transform: scale(1) translateY(-1px);
     }
