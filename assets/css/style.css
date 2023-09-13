@@ -1,3 +1,4 @@
+/* random($limit: 2000)+1000 *1ms; */
 @keyframes loader-anim {
   0% {
     transform: rotate(0);
@@ -19,8 +20,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-body, html {
+body {
   margin: 0;
+}
+
+.height100 {
   height: 100%;
 }
 
@@ -49,12 +53,36 @@ h3 {
   opacity: 1;
   position: absolute;
   border-radius: 5px;
-  animation: loader-anim 2465ms forwards;
+  animation: loader-anim 0s forwards;
 }
 
 .page {
   transform: scale(0);
-  animation: page-return 0s 2465ms forwards;
+  animation: page-return 0s 0s forwards;
+}
+
+.button-style {
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-weight: 500;
+  font-size: 0.9em;
+  text-decoration: none;
+  box-shadow: 0px 0px 3px grey;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.button-style:active {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 0px 6px grey;
+}
+@media (min-width: 1024px) {
+  .button-style:hover {
+    background: linear-gradient(#ff93e1, #a16be0);
+    box-shadow: 0px 0px 6px grey;
+  }
 }
 
 .header {
@@ -68,6 +96,17 @@ h3 {
 }
 .header img {
   width: 50%;
+}
+@media (min-width: 1024px) {
+  .header img {
+    width: 15%;
+    padding: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    box-shadow: none;
+  }
 }
 
 .localisation {
@@ -92,37 +131,33 @@ h3 {
 }
 .intro > * {
   text-align: center;
-  width: 75%;
   margin-bottom: 15px;
 }
 .intro-titre {
   font-size: 1.5em;
   margin: 0 0 15px 0;
   font-weight: 500;
+  width: 75%;
+}
+@media (min-width: 1024px) {
+  .intro-titre {
+    font-size: 2.5em;
+  }
 }
 .intro-texte {
   color: #353535;
   font-weight: 300;
+  width: 75%;
 }
-.intro-button {
-  padding: 10px 0px;
-  border-radius: 30px;
-  border: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  font-weight: 500;
-  font-size: 0.9em;
-  text-decoration: none;
-  box-shadow: 0px 0px 3px grey;
-  width: 50%;
-}
-.intro-button:active {
-  background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 0px 0px 6px grey;
+
+.container-fonctionnement {
+  display: flex;
+  justify-content: center;
 }
 
 .fonctionnement {
   padding: 10px 15px 30px;
+  width: 1024px;
 }
 .fonctionnement-etapes {
   background-color: #F6F6F6;
@@ -132,9 +167,14 @@ h3 {
   box-shadow: 0px 4px 5px lightgray;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .fonctionnement-etapes {
+    width: 27%;
+  }
+}
 .fonctionnement-etapes i {
+  display: flex;
   position: absolute;
-  left: 40px;
   color: #9356DC;
 }
 .fonctionnement-etapes-number {
@@ -148,17 +188,49 @@ h3 {
   color: white;
   font-size: 0.6em;
   position: absolute;
-  left: 11px;
+  margin-left: -27px;
 }
 .fonctionnement-etapes-texte {
   font-weight: 500;
 }
+@media (min-width: 1024px) {
+  .fonctionnement .etapes-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
+/* .container-restaurants{
+    background-color: $grey-background-color;
+    @media (min-width: $bp-desktop) {
+        @include x-centered();
+    }
+}
+
+.container-card{
+    @media (min-width: $bp-desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+} */
 .restaurants {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
   padding: 30px 0;
+  /*     @media (min-width: $bp-desktop) {
+          width: $bp-desktop;
+
+          .restaurants-card{
+              width: 45%;
+              margin-bottom: 60px;
+          }
+
+          & > *{
+              margin: 0;
+          }
+      } */
 }
 .restaurants > * {
   margin: 10px 20px;
@@ -207,28 +279,6 @@ h3 {
   border-radius: 2px;
 }
 
-.footer {
-  background-color: #353535;
-  color: white;
-  padding: 15px;
-}
-.footer-logo {
-  font-family: "Shrikhand";
-  padding-bottom: 10px;
-}
-.footer-content {
-  display: flex;
-  flex-direction: column;
-}
-.footer-content i {
-  width: 30px;
-}
-.footer-content-links {
-  text-decoration: none;
-  color: white;
-  padding: 2px 0;
-}
-
 .over {
   position: absolute;
 }
@@ -249,4 +299,26 @@ h3 {
 }
 .anim-trigger:checked + .under {
   transform: scale(1) translateY(-1px);
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 15px;
+}
+.footer-logo {
+  font-family: "Shrikhand";
+  padding-bottom: 10px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+.footer-content i {
+  width: 30px;
+}
+.footer-content-links {
+  text-decoration: none;
+  color: white;
+  padding: 2px 0;
 }
