@@ -7,6 +7,8 @@ $grey-text-color: #353535;
 $grey-background-color: #F6F6F6;
 $duration-loader: random($limit: 2000)+1000 *1ms;
 
+$bp-desktop: 1024px;
+
 //Mixins
 
 @mixin centered{
@@ -18,22 +20,6 @@ $duration-loader: random($limit: 2000)+1000 *1ms;
 @mixin x-centered{
     display: flex;
     justify-content: center;
-}
-
-@mixin button-style{
-    padding: 10px 0px;
-    border-radius: 30px;
-    border: 0;
-    background: linear-gradient($secondary-color, $main-color);
-    color: white;
-    font-weight: 500;
-    font-size: .9em;
-    text-decoration: none;
-    box-shadow: 0px 0px 3px grey;
-    &:active{
-        background: linear-gradient(lighten($secondary-color, 5%), lighten($main-color, 5%));
-        box-shadow: 0px 0px 6px grey;
-    }
 }
 
 //Animations
@@ -65,8 +51,11 @@ $duration-loader: random($limit: 2000)+1000 *1ms;
 
 //Général
 
-body, html{
+body{
     margin: 0;
+}
+
+.height100{
     height: 100%;
 }
 
@@ -79,7 +68,6 @@ h3{
 }
 
 .div-loader{
-    //background-color: pink;
     position: absolute;
     opacity: 1;
     height: 100%;
@@ -103,6 +91,28 @@ h3{
     animation: page-return 0s $duration-loader forwards;
 }
 
+.button-style{
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 0;
+    background: linear-gradient($secondary-color, $main-color);
+    color: white;
+    font-weight: 500;
+    font-size: .9em;
+    text-decoration: none;
+    box-shadow: 0px 0px 3px grey;
+    width: fit-content;
+    &:active{
+        background: linear-gradient(lighten($secondary-color, 5%), lighten($main-color, 5%));
+        box-shadow: 0px 0px 6px grey;
+    }
+    @media (min-width: $bp-desktop) {
+        &:hover{
+            background: linear-gradient(lighten($secondary-color, 5%), lighten($main-color, 5%));
+            box-shadow: 0px 0px 6px grey;
+        }
+    }
+}
 
 //Haut de page
 
@@ -113,7 +123,15 @@ h3{
     position: relative;
     z-index:1;
     img{
-        width: 50%;
+        width: 50%;    
+        @media (min-width: $bp-desktop) {
+            width: 200px;
+            padding: 15px;
+        }
+    }
+
+    @media (min-width: $bp-desktop) {
+        box-shadow: none;
     }
 }
 
@@ -137,7 +155,6 @@ h3{
 
     & > *{
         text-align: center;
-        width: 75%;
         margin-bottom: 15px;
     }
 
@@ -145,24 +162,29 @@ h3{
         font-size: 1.5em;
         margin: 0 0 15px 0;
         font-weight: 500;
+        width: 75%;
+        @media (min-width: $bp-desktop) {
+            font-size: 2.5em;
+        }
     }
 
     &-texte{
         color: $grey-text-color;
         font-weight: 300;
-    }
-
-    &-button{
-        @include button-style();
-        width: 50%;
+        width: 75%;
     }
 }
 
 //Fonctionnement
 
+.container-fonctionnement{
+    @include x-centered();
+}
+
 .fonctionnement{
 
     padding: 10px 15px 30px;
+    width: 1024px;
 
     &-etapes{
         background-color: $grey-background-color;
@@ -171,10 +193,13 @@ h3{
         margin: 15px 5px;
         box-shadow: 0px 4px 5px lightgray;
         text-align: center;
+        @media (min-width: $bp-desktop) {
+            width: 27%;
+        }
 
         i{
+            display: flex;
             position: absolute;
-            left: 40px;
             color: $main-color;
         }
 
@@ -187,16 +212,30 @@ h3{
             color: white;
             font-size: 0.6em;
             position: absolute;
-            left: 11px;
+            margin-left: -27px;
         }
 
         &-texte{
             font-weight: 500;
         }
     }
+
+    .etapes-container{
+        @media (min-width: $bp-desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 //Restaurants
+
+.container-restaurants{
+    background-color: $grey-background-color;
+    @media (min-width: $bp-desktop) {
+        @include x-centered();
+    }
+}
 
 .restaurants{
 
@@ -205,8 +244,12 @@ h3{
     background-color: $grey-background-color;
     padding: 30px 0;
 
-    & > *{
+    &-titre, .container-card{
         margin: 10px 20px;
+    }
+
+    a{
+        text-decoration: none;
     }
 
     &-card{
@@ -215,7 +258,7 @@ h3{
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
         text-decoration: none;
         color: black;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 
         img{
             object-fit: cover;
@@ -231,6 +274,7 @@ h3{
             justify-content: space-between;
             align-items: center;
             padding: 5px 15px 15px;
+            //background-color: white;
 
             &-texte{
 
@@ -257,7 +301,57 @@ h3{
             border-radius: 2px;
         }
     }
+
+    @media (min-width: $bp-desktop) {
+
+        width: $bp-desktop;
+        padding-bottom: 0;
+
+        &-titre, .container-card{
+            margin: 15px 0px;
+        }
+
+        .container-card{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+
+        a{
+            width: 45%;
+            margin-bottom: 40px;
+        }
+
+        &-card{
+            margin-bottom: 0px;
+        }
+    }
 }
+
+.over{
+    position: absolute;
+}
+
+.under{
+    color: $main-color;
+    transform: scale(0);
+    transition: transform 400ms;
+}
+
+.anim-trigger{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    margin: 0;
+    z-index: 2;
+    &:checked + .under{
+        transform: scale(1) translateY(-1px);
+    }
+}
+
+//Footer
 
 .footer{
 
@@ -284,26 +378,26 @@ h3{
             padding: 2px 0;
         }
     }
-}
 
-.over{
-    position: absolute;
-}
+    @media (min-width: $bp-desktop){
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        flex-direction: row-reverse;
 
-.under{
-    color: $main-color;
-    transform: scale(0);
-    transition: transform 400ms;
-}
+        height: 50px;
 
-.anim-trigger{
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    opacity: 0;
-    margin: 0;
-    z-index: 2;
-    &:checked + .under{
-        transform: scale(1) translateY(-1px);
+        &-content{
+            display: flex;
+            flex-direction: row;
+
+            &-links{
+                padding: 2px 15px;
+            }
+        }
+
+        &-logo{
+            padding: 0px 30px;
+        }
     }
 }
