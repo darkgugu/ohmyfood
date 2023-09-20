@@ -1,0 +1,140 @@
+// Variables
+
+$main-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$grey-text-color: #353535;
+$grey-background-color: #F6F6F6;
+$duration-loader: random($limit: 2000)+1000 *1ms;
+
+$bp-desktop: 1024px;
+
+//Mixins
+
+@mixin centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin x-centered{
+    display: flex;
+    justify-content: center;
+}
+
+//Général
+
+body{
+    margin: 0;
+}
+
+.height100{
+    height: 100%;
+}
+
+h2{
+    font-weight: 500;
+}
+h3{
+    font-weight: 500;
+    margin: 0;
+}
+
+//Polices
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.button-style{
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 0;
+    background: linear-gradient($secondary-color, $main-color);
+    color: white;
+    font-weight: 500;
+    font-size: .9em;
+    text-decoration: none;
+    box-shadow: 0px 0px 3px grey;
+    width: fit-content;
+    &:active{
+        background: linear-gradient(lighten($secondary-color, 5%), lighten($main-color, 5%));
+        box-shadow: 0px 0px 6px grey;
+    }
+    @media (min-width: $bp-desktop) {
+        &:hover{
+            background: linear-gradient(lighten($secondary-color, 5%), lighten($main-color, 5%));
+            box-shadow: 0px 0px 6px grey;
+        }
+    }
+}
+
+.header{
+    @include centered();
+    padding: 15px;
+    box-shadow: 0px 1px 5px grey;
+    position: relative;
+    z-index:1;
+    img{
+        width: 50%;    
+        @media (min-width: $bp-desktop) {
+            width: 200px;
+            padding: 15px;
+        }
+    }
+
+    @media (min-width: $bp-desktop) {
+        box-shadow: none;
+    }
+}
+
+//Footer
+
+.footer{
+
+    background-color: $grey-text-color;
+    color: white;
+    padding: 15px;
+
+    &-logo{
+        font-family: 'Shrikhand';
+        padding-bottom: 10px;
+    }
+
+    &-content{
+
+        display: flex;
+        flex-direction: column;
+        i{
+            width: 30px;
+        }
+
+        &-links{
+            text-decoration: none;
+            color: white;
+            padding: 2px 0;
+        }
+    }
+
+    @media (min-width: $bp-desktop){
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        flex-direction: row-reverse;
+
+        height: 50px;
+
+        &-content{
+            display: flex;
+            flex-direction: row;
+
+            &-links{
+                padding: 2px 15px;
+            }
+        }
+
+        &-logo{
+            padding: 0px 30px;
+        }
+    }
+}

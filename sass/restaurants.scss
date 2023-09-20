@@ -1,0 +1,119 @@
+@import "./partials/common";
+
+.header{
+    justify-content: space-between;
+    a, &-right{
+        width: 10%;
+        transform: scale(1.5);
+        padding: 0 10px;
+    }
+    box-shadow: none;
+
+    i{
+        color: black;
+    }
+}
+
+.background{
+    width: 100%;
+}
+
+.menu{
+
+    width: 100%;
+    background-color: $grey-background-color;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+    &-titre{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        h2{
+            font-family: 'Shrikhand';
+        }
+    }
+
+    &-corps{
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+
+        &-plats{
+
+            padding-bottom: 15px;
+            &-titreContainer{
+                padding-bottom: 15px;
+                &-titre{
+                    font-weight: 300;
+                }
+                &-barre{
+                    height: 4px;
+                    width: 45px;
+                    background-color: #99E2D0;
+                    margin-top: 5px;
+                }
+            }
+            &-content{
+                display: flex;
+                flex-direction: column;
+                &-cardContainer{
+                    display: flex;
+                    padding-bottom: 10px;
+                    &-card{
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        background-color: white;
+                        border-radius: 15px;
+                        width: 100%;
+                        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+                        &-content > *,&-prix{
+                            margin: 10px;
+                        }
+                        &-content{
+                            & > *{
+                                text-overflow: ellipsis;
+                            }
+                            &-titre{
+                                font-weight: 500;
+                            }
+                            &-texte{
+                                font-weight: 300;
+                                white-space: nowrap;
+                                //background-color: bisque;
+                                //text-overflow: ellipsis;
+                                overflow: hidden;
+                                width: 70vw;
+                            }
+                        }
+                        &-prix{
+                            margin-right: 20px;
+                        }
+                    }
+                    &-divAnim{
+                        background-color: aqua;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &-boutton{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        .button-style{
+            padding: 15px;
+            width: 45%;
+            @include centered();
+            font-size: 1.2em;
+        }
+    }
+}
