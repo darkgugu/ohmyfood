@@ -79,17 +79,17 @@
                         &-content{
                             & > *{
                                 text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                max-width: 70vw;
+                                //background-color: bisque;
+
                             }
                             &-titre{
                                 font-weight: 500;
                             }
                             &-texte{
                                 font-weight: 300;
-                                white-space: nowrap;
-                                //background-color: bisque;
-                                //text-overflow: ellipsis;
-                                overflow: hidden;
-                                width: 70vw;
                             }
                         }
                         &-prix{
@@ -98,6 +98,7 @@
                     }
                     &-divAnim{
                         background-color: aqua;
+                        width: 100px;
                     }
                 }
             }
