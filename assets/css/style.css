@@ -1,3 +1,4 @@
+/* random($limit: 2000)+1000 *1ms; */
 body {
   margin: 0;
 }
@@ -91,8 +92,8 @@ h3 {
 @media (min-width: 1024px) {
   .footer {
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: row-reverse;
     height: 50px;
   }
@@ -106,6 +107,29 @@ h3 {
   .footer-logo {
     padding: 0px 30px;
   }
+}
+
+.over {
+  position: absolute;
+}
+
+.under {
+  color: #9356DC;
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.anim-trigger {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  margin: 0;
+  z-index: 2;
+  display: none;
+}
+.anim-trigger:checked + .under {
+  transform: scale(1) translateY(-1px);
 }
 
 @keyframes loader-anim {
@@ -141,12 +165,12 @@ h3 {
   opacity: 1;
   position: absolute;
   border-radius: 5px;
-  animation: loader-anim 2095ms forwards;
+  animation: loader-anim 0ms forwards;
 }
 
 .page {
   transform: scale(0);
-  animation: page-return 0s 2095ms forwards;
+  animation: page-return 0s 0ms forwards;
 }
 
 .localisation {
@@ -326,26 +350,4 @@ h3 {
   .restaurants-card {
     margin-bottom: 0px;
   }
-}
-
-.over {
-  position: absolute;
-}
-
-.under {
-  color: #9356DC;
-  transform: scale(0);
-  transition: transform 400ms;
-}
-
-.anim-trigger {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  opacity: 0;
-  margin: 0;
-  z-index: 2;
-}
-.anim-trigger:checked + .under {
-  transform: scale(1) translateY(-1px);
 }

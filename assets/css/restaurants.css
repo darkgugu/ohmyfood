@@ -1,3 +1,4 @@
+/* random($limit: 2000)+1000 *1ms; */
 body {
   margin: 0;
 }
@@ -91,8 +92,8 @@ h3 {
 @media (min-width: 1024px) {
   .footer {
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: row-reverse;
     height: 50px;
   }
@@ -106,6 +107,29 @@ h3 {
   .footer-logo {
     padding: 0px 30px;
   }
+}
+
+.over {
+  position: absolute;
+}
+
+.under {
+  color: #9356DC;
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.anim-trigger {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  margin: 0;
+  z-index: 2;
+  display: none;
+}
+.anim-trigger:checked + .under {
+  transform: scale(1) translateY(-1px);
 }
 
 .header {
@@ -185,21 +209,22 @@ h3 {
 }
 .menu-corps-plats-content-cardContainer-card-content > * {
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 70vw;
 }
 .menu-corps-plats-content-cardContainer-card-content-titre {
   font-weight: 500;
 }
 .menu-corps-plats-content-cardContainer-card-content-texte {
   font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 70vw;
 }
 .menu-corps-plats-content-cardContainer-card-prix {
   margin-right: 20px;
 }
 .menu-corps-plats-content-cardContainer-divAnim {
   background-color: aqua;
+  width: 100px;
 }
 .menu-boutton {
   display: flex;

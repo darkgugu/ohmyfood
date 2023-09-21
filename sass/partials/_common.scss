@@ -5,7 +5,7 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey-text-color: #353535;
 $grey-background-color: #F6F6F6;
-$duration-loader: random($limit: 2000)+1000 *1ms;
+$duration-loader: 0ms;/* random($limit: 2000)+1000 *1ms; */
 
 $bp-desktop: 1024px;
 
@@ -118,8 +118,8 @@ h3{
 
     @media (min-width: $bp-desktop){
         display: flex;
-        justify-content: end;
-        align-items: end;
+        justify-content: flex-end;
+        align-items: flex-end;
         flex-direction: row-reverse;
 
         height: 50px;
@@ -136,5 +136,28 @@ h3{
         &-logo{
             padding: 0px 30px;
         }
+    }
+}
+
+.over{
+    position: absolute;
+}
+
+.under{
+    color: $main-color;
+    transform: scale(0);
+    transition: transform 400ms;
+}
+
+.anim-trigger{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    margin: 0;
+    z-index: 2;
+    display: none;
+    &:checked + .under{
+        transform: scale(1) translateY(-1px);
     }
 }
