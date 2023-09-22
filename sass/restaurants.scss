@@ -40,7 +40,6 @@
 
     &-corps{
         padding: 15px;
-
         display: flex;
         flex-direction: column;
 
@@ -73,17 +72,17 @@
                         border-radius: 15px;
                         width: 100%;
                         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+                        transition: width 1000ms, border-top-right-radius 1000ms, border-bottom-right-radius 1000ms;
+
                         &-content > *,&-prix{
                             margin: 10px;
                         }
                         &-content{
+                            width: 85%;
                             & > *{
                                 text-overflow: ellipsis;
                                 white-space: nowrap;
                                 overflow: hidden;
-                                max-width: 70vw;
-                                //background-color: bisque;
-
                             }
                             &-titre{
                                 font-weight: 500;
@@ -93,16 +92,31 @@
                             }
                         }
                         &-prix{
-                            margin-right: 20px;
+                            transition: transform 400ms;
                         }
                     }
+
                     &-divAnim{
-                        background-color: aqua;
-                        width: 100px;
+                        @include centered();
+                        background-color: $tertiary-color;
+                        width: 13%;
+                        height: 68px;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        transform: scaleX(0);
+                        transition: transform 1000ms;
+                        transform-origin: right;
+                        position: absolute;
+                        z-index: 100;
+                        right: 15px;
+
+                        i{
+                            transform: scale(1.5);
+                            color: white;
+                        }
                     }
                 }
             }
-
         }
     }
 
@@ -115,6 +129,22 @@
             width: 45%;
             @include centered();
             font-size: 1.2em;
+        }
+    }
+}
+
+.anim-plats{
+
+    display: none;
+    &:checked ~ .menu-corps-plats-content-cardContainer{
+        &-card{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            width: 87%;
+        }
+
+        &-divAnim{
+            transform: scaleX(1);
         }
     }
 }

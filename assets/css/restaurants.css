@@ -203,15 +203,18 @@ h3 {
   border-radius: 15px;
   width: 100%;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  transition: width 1000ms, border-top-right-radius 1000ms, border-bottom-right-radius 1000ms;
 }
 .menu-corps-plats-content-cardContainer-card-content > *, .menu-corps-plats-content-cardContainer-card-prix {
   margin: 10px;
+}
+.menu-corps-plats-content-cardContainer-card-content {
+  width: 85%;
 }
 .menu-corps-plats-content-cardContainer-card-content > * {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 70vw;
 }
 .menu-corps-plats-content-cardContainer-card-content-titre {
   font-weight: 500;
@@ -220,11 +223,27 @@ h3 {
   font-weight: 300;
 }
 .menu-corps-plats-content-cardContainer-card-prix {
-  margin-right: 20px;
+  transition: transform 400ms;
 }
 .menu-corps-plats-content-cardContainer-divAnim {
-  background-color: aqua;
-  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 13%;
+  height: 68px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: scaleX(0);
+  transition: transform 1000ms;
+  transform-origin: right;
+  position: absolute;
+  z-index: 100;
+  right: 15px;
+}
+.menu-corps-plats-content-cardContainer-divAnim i {
+  transform: scale(1.5);
+  color: white;
 }
 .menu-boutton {
   display: flex;
@@ -238,4 +257,16 @@ h3 {
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
+}
+
+.anim-plats {
+  display: none;
+}
+.anim-plats:checked ~ .menu-corps-plats-content-cardContainer-card {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 87%;
+}
+.anim-plats:checked ~ .menu-corps-plats-content-cardContainer-divAnim {
+  transform: scaleX(1);
 }

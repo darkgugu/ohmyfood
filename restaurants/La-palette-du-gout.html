@@ -26,8 +26,13 @@
         <div class="menu">
             <div class="menu-titre">
                 <h2>La Palette du gout</h2>
-                <i class="fa-solid fa-heart"></i>
-                <!-- Insérer anim coeur -->
+                <label>
+                    <div>
+                        <i class="fa-regular fa-heart over" style="color: #000000;"></i>
+                        <input type="checkbox" class="anim-trigger">
+                        <i class="fa-solid fa-heart under"></i>
+                    </div>
+                </label>
             </div>
             <div class="menu-corps">
                 <div class="menu-corps-plats">
@@ -36,36 +41,51 @@
                         <div class="menu-corps-plats-titreContainer-barre"></div>
                     </div>
                     <div class="menu-corps-plats-content">
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Fricassée d'escargots</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Au piment d'Espelette</p>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Fricassée d'escargots avec du bon paing sa mère</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Au piment d'Espelette celui qui pique bien bien la</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">25€</div>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">25€</div>
-                            </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Foie gras de canard mi-cuit</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Et ses copeaux de truffe noire</p>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">35€</div>
                             </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Œuf au plat</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Assaisonné à la truffe sur lit de caviar</p>
+                        </label>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Foie gras de canard mi-cuit Foie gras de canard mi-cuit</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Et ses copeaux de truffe noire Et ses copeaux de truffe noire</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">35€</div>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">20€</div>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
                             </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
+                        </label>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Œuf au plat</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Assaisonné à la truffe sur lit de caviar</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">20€</div>
+                                </div>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                        </label>         
                     </div>
                 </div>
                 <div class="menu-corps-plats">
@@ -74,36 +94,51 @@
                         <div class="menu-corps-plats-titreContainer-barre"></div>
                     </div>
                     <div class="menu-corps-plats-content">
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Filet de bœuf aux herbes</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Accompagné de sa ribambelle de légumes</p>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Filet de bœuf aux herbes</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Accompagné de sa ribambelle de légumes</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">40€</div>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">40€</div>
-                            </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Parmentier de queue de bœuf</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">À la truffe noire sur sa purée de panais</p>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">35€</div>
                             </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Filet de turbot</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Aux agrumes</p>
+                        </label>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Parmentier de queue de bœuf</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">À la truffe noire sur sa purée de panais</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">35€</div>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">44€</div>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
                             </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
+                        </label>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Filet de turbot</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Aux agrumes</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">44€</div>
+                                </div>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                        </label>
                     </div>
                 </div>
                 <div class="menu-corps-plats">
@@ -112,36 +147,51 @@
                         <div class="menu-corps-plats-titreContainer-barre"></div>
                     </div>
                     <div class="menu-corps-plats-content">
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Paris-Brest</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Revisité</p>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Paris-Brest</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Revisité</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">18€</div>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">18€</div>
-                            </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Macaron au chocolat d'exception</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Et glace à la vanille de Madagascar</p>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">22€</div>
                             </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
-                        <div class="menu-corps-plats-content-cardContainer">
-                            <div class="menu-corps-plats-content-cardContainer-card">
-                                <div class="menu-corps-plats-content-cardContainer-card-content">
-                                    <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Mousse au chocolat</h4>
-                                    <p class="menu-corps-plats-content-cardContainer-card-content-texte">Au piment d'Espelette et à la truffe noire</p>
+                        </label>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Macaron au chocolat d'exception</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Et glace à la vanille de Madagascar</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">22€</div>
                                 </div>
-                                <div class="menu-corps-plats-content-cardContainer-card-prix">23€</div>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
                             </div>
-                            <div class="menu-corps-plats-content-cardContainer-divAnim"><!-- ANIM --></div>
-                        </div>
+                        </label>
+                        <label>
+                            <div class="menu-corps-plats-content-cardContainer">
+                                <input type="checkbox" class="anim-plats">
+                                <div class="menu-corps-plats-content-cardContainer-card">
+                                    <div class="menu-corps-plats-content-cardContainer-card-content">
+                                        <h4 class="menu-corps-plats-content-cardContainer-card-content-titre">Mousse au chocolat</h4>
+                                        <p class="menu-corps-plats-content-cardContainer-card-content-texte">Au piment d'Espelette et à la truffe noire</p>
+                                    </div>
+                                    <div class="menu-corps-plats-content-cardContainer-card-prix">23€</div>
+                                </div>
+                                <div class="menu-corps-plats-content-cardContainer-divAnim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -149,7 +199,6 @@
                 <a class="button-style">Commander</a>
             </div>
         </div>
-
         <footer class="footer">
             <div class="footer-logo">ohmyfood</div>
             <div class="footer-content">
