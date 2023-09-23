@@ -111,6 +111,7 @@ h3 {
 
 .over {
   position: absolute;
+  transform: scale(1.5);
 }
 
 .under {
@@ -129,7 +130,7 @@ h3 {
   display: none;
 }
 .anim-trigger:checked + .under {
-  transform: scale(1) translateY(-1px);
+  transform: scale(1.5) translateY(-1px);
 }
 
 @keyframes loader-anim {

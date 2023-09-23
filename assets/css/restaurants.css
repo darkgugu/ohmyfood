@@ -111,6 +111,7 @@ h3 {
 
 .over {
   position: absolute;
+  transform: scale(1.5);
 }
 
 .under {
@@ -129,9 +130,14 @@ h3 {
   display: none;
 }
 .anim-trigger:checked + .under {
-  transform: scale(1) translateY(-1px);
+  transform: scale(1.5) translateY(-1px);
 }
 
+@keyframes anim-plats {
+  100% {
+    transform: translate(0);
+  }
+}
 .header {
   justify-content: space-between;
   box-shadow: none;
@@ -176,6 +182,8 @@ h3 {
   padding-bottom: 15px;
 }
 .menu-corps-plats-titreContainer {
+  transform: translateX(-100px);
+  animation: anim-plats 600ms 0ms forwards;
   padding-bottom: 15px;
 }
 .menu-corps-plats-titreContainer-titre {
@@ -239,7 +247,7 @@ h3 {
   transform-origin: right;
   position: absolute;
   z-index: 100;
-  right: 15px;
+  right: 0px;
 }
 .menu-corps-plats-content-cardContainer-divAnim i {
   transform: scale(1.5);
@@ -259,14 +267,59 @@ h3 {
   font-size: 1.2em;
 }
 
-.anim-plats {
+.anim-coche {
   display: none;
 }
-.anim-plats:checked ~ .menu-corps-plats-content-cardContainer-card {
+.anim-coche:checked ~ .menu-corps-plats-content-cardContainer-card {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   width: 87%;
 }
-.anim-plats:checked ~ .menu-corps-plats-content-cardContainer-divAnim {
+.anim-coche:checked ~ .menu-corps-plats-content-cardContainer-divAnim {
   transform: scaleX(1);
+}
+
+.mixin-call1 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 100ms forwards;
+}
+
+.mixin-call2 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 200ms forwards;
+}
+
+.mixin-call3 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 300ms forwards;
+}
+
+.mixin-call4 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 400ms forwards;
+}
+
+.mixin-call5 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 500ms forwards;
+}
+
+.mixin-call6 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 600ms forwards;
+}
+
+.mixin-call7 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 700ms forwards;
+}
+
+.mixin-call8 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 800ms forwards;
+}
+
+.mixin-call9 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 900ms forwards;
 }
