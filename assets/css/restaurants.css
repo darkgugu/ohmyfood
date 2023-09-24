@@ -56,9 +56,13 @@ h3 {
 .header img {
   width: 50%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 430px) {
   .header img {
     width: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .header img {
     padding: 15px;
   }
 }
@@ -92,7 +96,7 @@ h3 {
 @media (min-width: 1024px) {
   .footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
     flex-direction: row-reverse;
     height: 50px;
@@ -139,13 +143,12 @@ h3 {
   }
 }
 .header {
-  justify-content: space-between;
   box-shadow: none;
 }
-.header a, .header-right {
-  width: 10%;
+.header a {
   transform: scale(1.5);
-  padding: 0 10px;
+  position: absolute;
+  left: 25px;
 }
 .header i {
   color: black;
@@ -153,6 +156,21 @@ h3 {
 
 .background {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+@media (min-width: 1024px) {
+  .background {
+    height: 500px;
+  }
+}
+
+.container-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .menu {
@@ -230,9 +248,6 @@ h3 {
 .menu-corps-plats-content-cardContainer-card-content-texte {
   font-weight: 300;
 }
-.menu-corps-plats-content-cardContainer-card-prix {
-  transition: transform 400ms;
-}
 .menu-corps-plats-content-cardContainer-divAnim {
   display: flex;
   align-items: center;
@@ -266,6 +281,27 @@ h3 {
   justify-content: center;
   font-size: 1.2em;
 }
+@media (min-width: 1024px) {
+  .menu {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-titre {
+    width: 30%;
+    justify-content: center;
+  }
+  .menu-titre h2 {
+    padding-right: 15px;
+  }
+  .menu-corps {
+    width: 60%;
+  }
+  .menu-boutton {
+    width: 50%;
+  }
+}
 
 .anim-coche {
   display: none;
@@ -283,43 +319,97 @@ h3 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 100ms forwards;
 }
+@media (min-width: 1024px) {
+  .mixin-call1 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 100ms forwards;
+  }
+}
 
 .mixin-call2 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 200ms forwards;
+}
+@media (min-width: 1024px) {
+  .mixin-call2 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 200ms forwards;
+  }
 }
 
 .mixin-call3 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 300ms forwards;
 }
+@media (min-width: 1024px) {
+  .mixin-call3 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 300ms forwards;
+  }
+}
 
 .mixin-call4 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 400ms forwards;
+}
+@media (min-width: 1024px) {
+  .mixin-call4 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 400ms forwards;
+  }
 }
 
 .mixin-call5 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 500ms forwards;
 }
+@media (min-width: 1024px) {
+  .mixin-call5 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 500ms forwards;
+  }
+}
 
 .mixin-call6 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 600ms forwards;
+}
+@media (min-width: 1024px) {
+  .mixin-call6 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 600ms forwards;
+  }
 }
 
 .mixin-call7 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 700ms forwards;
 }
+@media (min-width: 1024px) {
+  .mixin-call7 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 700ms forwards;
+  }
+}
 
 .mixin-call8 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 800ms forwards;
 }
+@media (min-width: 1024px) {
+  .mixin-call8 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 800ms forwards;
+  }
+}
 
 .mixin-call9 {
   transform: translateX(-1000px);
   animation: anim-plats 1000ms 900ms forwards;
+}
+@media (min-width: 1024px) {
+  .mixin-call9 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 900ms forwards;
+  }
 }

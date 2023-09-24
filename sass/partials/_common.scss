@@ -9,6 +9,7 @@ $duration-loader: 0ms;/* random($limit: 2000)+1000 *1ms; */
 $duration-coche: 1000ms;
 
 $bp-desktop: 1024px;
+$bp-intermediaire: 430px;
 
 //Mixins
 
@@ -77,9 +78,11 @@ h3{
     position: relative;
     z-index:1;
     img{
-        width: 50%;    
-        @media (min-width: $bp-desktop) {
+        width: 50%;
+        @media (min-width: $bp-intermediaire) {
             width: 200px;
+        }
+        @media (min-width: $bp-desktop) {
             padding: 15px;
         }
     }
@@ -119,7 +122,7 @@ h3{
 
     @media (min-width: $bp-desktop){
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-end;
         flex-direction: row-reverse;
 

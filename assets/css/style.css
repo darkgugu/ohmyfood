@@ -56,9 +56,13 @@ h3 {
 .header img {
   width: 50%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 430px) {
   .header img {
     width: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .header img {
     padding: 15px;
   }
 }
@@ -92,7 +96,7 @@ h3 {
 @media (min-width: 1024px) {
   .footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
     flex-direction: row-reverse;
     height: 50px;
