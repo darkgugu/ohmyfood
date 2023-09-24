@@ -413,3 +413,14 @@ h3 {
     animation: anim-plats 1000ms 900ms forwards;
   }
 }
+
+.mixin-call10 {
+  transform: translateX(-1000px);
+  animation: anim-plats 1000ms 1000ms forwards;
+}
+@media (min-width: 1024px) {
+  .mixin-call10 {
+    transform: translateX(-1500px);
+    animation: anim-plats 1000ms 1000ms forwards;
+  }
+}

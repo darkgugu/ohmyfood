@@ -193,7 +193,7 @@
     }
 }
 
-@for $i from 1 through 9 {
+@for $i from 1 through 10 {
     .mixin-call#{$i}{
         @include anim-plats-mixin(-1000px, 1000ms, $i*100ms);
         @media (min-width: $bp-desktop) {
@@ -201,4 +201,3 @@
         }
     }
 }
-
