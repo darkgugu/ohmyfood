@@ -1,4 +1,3 @@
-/* random($limit: 2000)+1000 *1ms; */
 body {
   margin: 0;
 }
@@ -330,110 +329,110 @@ h3 {
 
 .mixin-call1 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 100ms forwards;
+  animation: anim-plats 1000ms 100ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call1 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 100ms forwards;
+    animation: anim-plats 1000ms 100ms forwards;
   }
 }
 
 .mixin-call2 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 200ms forwards;
+  animation: anim-plats 1000ms 200ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call2 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 200ms forwards;
+    animation: anim-plats 1000ms 200ms forwards;
   }
 }
 
 .mixin-call3 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 300ms forwards;
+  animation: anim-plats 1000ms 300ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call3 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 300ms forwards;
+    animation: anim-plats 1000ms 300ms forwards;
   }
 }
 
 .mixin-call4 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 400ms forwards;
+  animation: anim-plats 1000ms 400ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call4 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 400ms forwards;
+    animation: anim-plats 1000ms 400ms forwards;
   }
 }
 
 .mixin-call5 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 500ms forwards;
+  animation: anim-plats 1000ms 500ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call5 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 500ms forwards;
+    animation: anim-plats 1000ms 500ms forwards;
   }
 }
 
 .mixin-call6 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 600ms forwards;
+  animation: anim-plats 1000ms 600ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call6 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 600ms forwards;
+    animation: anim-plats 1000ms 600ms forwards;
   }
 }
 
 .mixin-call7 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 700ms forwards;
+  animation: anim-plats 1000ms 700ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call7 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 700ms forwards;
+    animation: anim-plats 1000ms 700ms forwards;
   }
 }
 
 .mixin-call8 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 800ms forwards;
+  animation: anim-plats 1000ms 800ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call8 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 800ms forwards;
+    animation: anim-plats 1000ms 800ms forwards;
   }
 }
 
 .mixin-call9 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 900ms forwards;
+  animation: anim-plats 1000ms 900ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call9 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 900ms forwards;
+    animation: anim-plats 1000ms 900ms forwards;
   }
 }
 
 .mixin-call10 {
   transform: translateX(-1000px);
-  animation: anim-plats 0ms 1000ms forwards;
+  animation: anim-plats 1000ms 1000ms forwards;
 }
 @media (min-width: 1024px) {
   .mixin-call10 {
     transform: translateX(-1500px);
-    animation: anim-plats 0ms 1000ms forwards;
+    animation: anim-plats 1000ms 1000ms forwards;
   }
 }

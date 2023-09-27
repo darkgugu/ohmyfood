@@ -5,9 +5,9 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey-text-color: #353535;
 $grey-background-color: #F6F6F6;
-$duration-loader: 0ms;/* random($limit: 2000)+1000 *1ms; */
+$duration-loader: random($limit: 2000)+1000 *1ms;
 $duration-coche: 1000ms;
-$duration-plats: 0ms;
+$duration-plats: 1000ms;
 
 $bp-desktop: 1024px;
 $bp-intermediaire: 430px;

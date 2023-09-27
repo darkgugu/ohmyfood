@@ -1,4 +1,3 @@
-/* random($limit: 2000)+1000 *1ms; */
 body {
   margin: 0;
 }
@@ -170,12 +169,12 @@ h3 {
   opacity: 1;
   position: absolute;
   border-radius: 5px;
-  animation: loader-anim 0ms forwards;
+  animation: loader-anim 1067ms forwards;
 }
 
 .page {
   transform: scale(0);
-  animation: page-return 0s 0ms forwards;
+  animation: page-return 0s 1067ms forwards;
 }
 
 .localisation {
