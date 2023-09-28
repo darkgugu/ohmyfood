@@ -150,7 +150,9 @@ h3{
 }
 
 .under{
-    color: $main-color;
+    background: linear-gradient($main-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transform: scale(0);
     transition: transform 400ms;
 }
